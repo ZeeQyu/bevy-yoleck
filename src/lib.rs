@@ -311,8 +311,8 @@ impl YoleckTypeHandlers {
 /// Fields of the Yoleck editor.
 #[derive(Resource)]
 pub struct YoleckState {
-    entity_being_edited: Option<Entity>,
-    level_needs_saving: bool,
+    pub entity_being_edited: Option<Entity>,
+    pub level_needs_saving: bool,
 }
 
 impl YoleckState {
