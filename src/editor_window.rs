@@ -7,7 +7,7 @@ pub(crate) fn yoleck_editor_window(world: &mut World) {
     world.resource_scope(|world, mut egui_context: Mut<EguiContext>| {
         world.resource_scope(
             |world, mut yoleck_editor_sections: Mut<YoleckEditorSections>| {
-                egui::Window::new("Level Editor").show(egui_context.ctx_mut(), |ui| {
+                egui::Window::new("Level Editor").vscroll(true).show(egui_context.ctx_mut(), |ui| {
                     for section in yoleck_editor_sections.0.iter_mut() {
                         section.0.invoke(world, ui);
                     }
